@@ -1,0 +1,15 @@
+{{#each jobs}}
+    <div class='card card-body mb-2'>
+        <h4>{{this._doc.company}}</h4>
+        <p>{{this._doc.date}}</p>
+        <p>{{this._doc.location}}</p>
+        <p>{{this._doc.job_title}}</p>
+        <p>{{this._doc.status}}</p>
+        <p>{{this._doc.details}}</p>
+        <p>{{this._doc.link}}</p>
+        <a class='btn btn-dark btn-block' href="/jobs/edit/{{this._doc._id}}">Edit</a>
+    </div>
+{{else}}
+    <p>No Job Applications to Show</p>
+{{/each}}
+

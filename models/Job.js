@@ -1,11 +1,13 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+const date = new Date();
+let dateString = date.getMonth()+1 + '/' + date.getDay() + '/' + date.getFullYear() 
 //Create Schema
 const JobSchema = new Schema({
   date: {
-    type: Date,
-    default: Date.now
+    type: String,
+    default: dateString
   },
   company: {
     type: String,
