@@ -1,5 +1,11 @@
 <div class='jumbotron text-center'>
-    <h1 class="display-3">{{title}}</h1>
-    <p class='lead'>Track your job apps</p>
-    <a href='/jobs/add' class='btn btn-dark btn-lg'>Add Job</a>
+    <img class='logo' src='/img/logo.png'>
+    <p class='lead'>Track Your Job Apps</p>
+    {{#if user}}
+        <a href='/jobs/add' class='btn btn-dark btn-lg'>Add Job</a>
+    {{else}}
+        <a href='/users/login' class='btn btn-dark btn-lg'>Login</a>
+        <a href='/users/register' class='btn btn-dark btn-lg'>Register</a>
+    {{/if}}
+    
 </div>

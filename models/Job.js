@@ -30,6 +30,10 @@ const JobSchema = new Schema({
   },
   link: {
     type: String
+  },
+  User: {
+    type: String,
+    required: true
   }
 });
 

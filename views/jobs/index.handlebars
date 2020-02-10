@@ -7,7 +7,11 @@
         <p>{{this._doc.status}}</p>
         <p>{{this._doc.details}}</p>
         <p>{{this._doc.link}}</p>
-        <a class='btn btn-dark btn-block' href="/jobs/edit/{{this._doc._id}}">Edit</a>
+        <a class='btn btn-dark btn-block mb-2' href="/jobs/edit/{{this._doc._id}}">Edit</a>
+        <form method='POST' action='/jobs/{{this._doc._id}}?_method=DELETE'>
+            <input type='hidden' name='_method' value='DELETE'>
+            <input type='submit' class='btn btn-danger btn-block' value='Delete'>
+        </form>
     </div>
 {{else}}
     <p>No Job Applications to Show</p>
